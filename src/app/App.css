@@ -1,0 +1,130 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+.loading-spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100svh;
+  width: 100vw;
+  background: #000;
+}
+
+.loading-spinner {
+  border: 5px solid rgb(126, 126, 126); 
+  border-top: 10px solid #70cc45; 
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+.card-container {
+  overflow-y: scroll;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-height: 100svh;
+  gap: 20px;
+}
+body{
+  background-color: black;
+}
+.card {
+  border: 1px solid #c1c1c1;
+  border-radius: 8px;
+  padding: 20px;
+  width: 220px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  align-items: center;
+  > img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+  }
+}
+
+.card-title {
+  margin-top: 0;
+  font-size: 18px;
+  color: #fff;
+}
+
+::-webkit-scrollbar {
+  width: 10px; 
+}
+
+::-webkit-scrollbar-track {
+  background: #3e3e3e; 
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #aaaaaa; 
+}
+
+.updated-card {
+  box-shadow: 0 20px 30px rgba(229, 143, 22, 0.507);
+  border: 1px solid gold;
+  background-color: #222;
+  border-radius: 10px;
+  height: 300px;
+  min-width: 300px;
+  padding: 20px;
+  margin: 20px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.updated-card img {
+  width: auto;
+  height: 150px; 
+  border-radius: 100px;
+  object-fit: cover; 
+  border: 2px solid goldenrod;
+}
+
+.updated-card h3:nth-child(2n-1) {
+  font-size: 16px;
+  color: #fff;
+  align-self: start;
+  > span {
+    color: rgb(149, 195, 255);
+  }
+}
+.updated-card h3:nth-child(2n) {
+  font-size: 16px;
+  color: lightcyan;
+  align-self: start;
+  > span {
+    color: rgb(142, 252, 252);
+  }
+}
+.nameSelectedCard {
+  font-size: 20px;
+  background-color: rgb(225, 135, 0);
+  border-radius: 10px;
+  padding: 5px;
+  margin: 3px 0;
+}
